@@ -17,6 +17,9 @@ html{
 }
 html,body{
     height:100%;
+    margin: 0;
+    padding: 0;
+
 }
 body{
     background: #f4f1f1;
@@ -39,26 +42,24 @@ a:hover{
     text-decoration: none;
     border-radius: 5%;
     padding:10px 20px;
-    
+    display: inline-block;
+    margin:10px;
     
 }
 .content-wrapper{
     margin: 0 auto;
     padding:30px;
     width:800px;
+    max-width: 90%;
 }
 .wall h1{
-    position: absolute;
-    top:10%;
-    right:25%;
+    text-align: center;
     font-family: Segoe Script;
     font-size: 40px;
-    letter-spacing: 0.5;
+    letter-spacing: 0.5px;
 }
 .wall h2{
-    position: absolute;
-    top:20%;
-    right:15%;
+    text-align: center;
     font-family: Segoe Script;
     font-size: 35px;
    
@@ -69,6 +70,7 @@ a:hover{
     background-size: cover;
     display: flex;
     flex-direction: column;
+    min-height: 1000px;
 }
 
 .home .content-wrapper{
@@ -149,6 +151,8 @@ footer{
     display:flex;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap;
+    padding:5px;
 }
 footer a{
     color: #bcaa96 ;
@@ -159,6 +163,7 @@ footer a:hover{
 
 .socials{
         list-style: none;
+        padding: :0;
 }
 .socials li{
     display: inline-block;
@@ -169,4 +174,57 @@ footer a:hover{
 }
 .socials img:hover{
     opacity: 0.4;
+}
+@media (max-width:768px)
+{
+    .wall h1{
+        font-size: 20px;
+        margin: 10px auto;
+        text-align: center;
+    }
+    .wall h2{
+        font-size: 20px;
+        margin: 10px auto;
+        text-align: center;
+       
+    }
+    .resume header::before {
+        height: 250px;
+    }
+    .project img {
+        float: none;
+        margin: 10px auto;
+        display: block;
+        width: 100%;
+    }
+
+    footer {
+        display: block;
+    }
+}
+@media  (max-width:480px)
+{
+    .downloadlink{
+        position: absolute;
+        top: 3%;
+        left: 3%;
+    }
+    .home1{
+        position: absolute;
+        top: 3%;
+        right: 3%;
+    }
+    .btn {
+        padding: 8px 15px;
+        font-size: 0.5rem;
+    }
+
+    .socials img {
+        width: 20px;
+    }
+
+    .content-wrapper {
+        padding: 15px;
+        width: 100%;
+    }
 }
