@@ -1,5 +1,4 @@
-/*COLOR PALETTE
-
+/* COLOR PALETTE
 Dark green    #3c8453
 Sandy beige   #bcaa96
 Dark gray     #222222
@@ -7,190 +6,179 @@ Light gray    #d3d4d6
 Off-white     #f6f6f6
 */
 
-
-/*GLOBAL--------------------*/
-html{
-    box-sizing: border-box;
-}
-*,*::before,*::after{
-    box-sizing: inherit;
-}
-html,body{
-    height:100%;
+/* GLOBAL STYLES */
+html, body {
     margin: 0;
     padding: 0;
-
-}
-body{
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
     background: #f4f1f1;
-    }
+}
 
-      
+html {
+    box-sizing: border-box;
+}
 
+*, *::before, *::after {
+    box-sizing: inherit;
+}
 
-/*--links--*/
-a{
+a {
     color: #2f39e7;
     text-decoration: none;
 }
-a:hover{
-     color: #24690d ;
+
+a:hover {
+    color: #24690d;
 }
-.btn{
-    background: #cbddff ;
-    color: #f6f6f6 ;
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.btn {
+    background: #cbddff;
+    color: #f6f6f6;
     text-decoration: none;
     border-radius: 5%;
-    padding:10px 20px;
-    display: inline-block;
-    margin:10px;
-    
+    padding: 10px 20px;
+    /*display: inline-block;
+    margin: 10px ;*/
 }
-.content-wrapper{
+
+/* CONTENT WRAPPER */
+.content-wrapper {
     margin: 0 auto;
-    padding:30px;
-    width:800px;
+    padding: 30px;
     max-width: 90%;
+    width: 800px;
 }
-.wall h1{
-    text-align: center;
-    font-family: Segoe Script;
-    font-size: 40px;
-    letter-spacing: 0.5px;
-}
-.wall h2{
-    text-align: center;
-    font-family: Segoe Script;
-    font-size: 35px;
-   
-}
-/*HOME--------------------*/
-.home{
-   background-image: url(./placeholder-images/bg-coffee-shop.jpg);
+
+/* HOME PAGE */
+.home {
+    background-image: url(./placeholder-images/bg-coffee-shop.jpg);
     background-size: cover;
     display: flex;
     flex-direction: column;
-    min-height: 1000px;
+    min-height: 100vh;
 }
 
-.home .content-wrapper{
-    /*background-color: rgb(237, 239, 225);
-   border-style:hidden;
-    border-color: #98a7c5;
-    border-width: 1px;*/
-    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+.home .content-wrapper {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     flex: 1 0 auto;
 }
-.conatainer{
-    padding: 30px;
-    background-color: rgb(255,255,255/0.9);
+
+.wall h1 {
+    font-family: Segoe Script;
+    font-size: 40px;
+    letter-spacing: 0.5px;
+    text-align: center;
+    margin: 0;
 }
 
+.wall h2 {
+    font-family: Segoe Script;
+    font-size: 35px;
+    text-align: center;
+    margin: 10px 0;
+}
 
-/*RESUME--------------------*/
-.resume{
+/* RESUME PAGE */
+.resume {
     background-color: #d4ecfb;
 }
-.resume header::before{
+
+.resume header::before {
     background-image: url(./placeholder-images/bg-home-office-studio.jpg);
     background-size: cover;
     display: block;
     height: 375px;
-    content:"";
+    content: "";
 }
-.resume-section{
+
+.resume-section {
     margin-bottom: 50px;
 }
-.resume-section h2{
-    border-bottom: 1px dashed #181b23 ;
+
+.resume-section h2 {
+    border-bottom: 1px dashed #181b23;
 }
-.downloadlink{
+
+.downloadlink {
     position: fixed;
     top: 3%;
     left: 3%;
 }
-.home1{
+
+.home1 {
     position: fixed;
     top: 3%;
     right: 3%;
 }
 
-
-/*EDUCATION--------------------*/
-
-
-/*work experience----*/
-/*.work-item
-{
-    display: grid;
-    grid-template-columns: 300px 1fr;
-}*/
-/*PROJECTS--------------------*/
-.project{
-   display: flow-root; 
-   margin: 15px 0;
+/* PROJECTS */
+.project {
+    display: flow-root;
+    margin: 15px 0;
 }
-.project img{
+
+.project img {
     width: 300px;
     float: left;
     margin-right: 10px;
 }
 
-
-
-
-/*ACHIVEMENTS-------------------*/
-
-
-
-
-/*footer------*/
-footer{
+/* FOOTER */
+footer {
     background-color: rgb(14, 13, 12);
     color: #d3d4d6;
-    display:flex;
+    display: flex;
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
-    padding:5px;
-}
-footer a{
-    color: #bcaa96 ;
-}
-footer a:hover{
-    color: #3c8453;    
+    text-align: center;
+    padding: 10px;
 }
 
-.socials{
-        list-style: none;
-        padding: :0;
+footer a {
+    color: #bcaa96;
 }
-.socials li{
+
+footer a:hover {
+    color: #3c8453;
+}
+
+.socials {
+    list-style: none;
+    padding: 0;
+}
+
+.socials li {
     display: inline-block;
     padding: 3px;
 }
-.socials img{
+
+.socials img {
     width: 30px;
 }
-.socials img:hover{
+
+.socials img:hover {
     opacity: 0.4;
 }
-@media (max-width:768px)
-{
-    .wall h1{
+
+/* RESPONSIVE STYLES */
+@media (max-width: 768px) {
+    .wall h1, .wall h2 {
         font-size: 20px;
         margin: 10px auto;
         text-align: center;
     }
-    .wall h2{
-        font-size: 20px;
-        margin: 10px auto;
-        text-align: center;
-       
-    }
+
     .resume header::before {
         height: 250px;
     }
+
     .project img {
         float: none;
         margin: 10px auto;
@@ -202,21 +190,11 @@ footer a:hover{
         display: block;
     }
 }
-@media  (max-width:480px)
-{
-    .downloadlink{
-        position: absolute;
-        top: 3%;
-        left: 3%;
-    }
-    .home1{
-        position: absolute;
-        top: 3%;
-        right: 3%;
-    }
+
+@media (max-width: 480px) {
     .btn {
         padding: 8px 15px;
-        font-size: 0.5rem;
+        font-size: 0.9rem;
     }
 
     .socials img {
